@@ -1,0 +1,24 @@
+@mixin button($height, $padding, $color: #000, $bgColor: #fff) {
+	text-align: center;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 24px;
+	text-transform: uppercase;
+	height: $height;
+	padding: $padding;
+	color: $color;
+	background-color: $bgColor;
+}
+
+.btn-50 {
+	@include button(50px, 13px 0);
+}
+.btn-60 {
+	@include button(60px, 19px 45px);
+}
+.btn-creen {
+	@include button(56px, 19px 45px, #0b9917, #fff);
+}
+.btn-grey {
+	@include button(60px, 19px 45px, #ffffff, #414141);
+}
