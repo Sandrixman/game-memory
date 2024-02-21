@@ -11,7 +11,9 @@ module.exports = env =>
 		{
 			mode: env.mode,
 			context: path.resolve(__dirname, 'src'),
-			entry: 'index.js',
+			entry: {
+				index: './index.js',
+			},
 			output: {
 				path: path.resolve(__dirname, 'dist'),
 				filename: '[name].bundle.js',
