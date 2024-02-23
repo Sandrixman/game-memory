@@ -1,21 +1,16 @@
 import './sass/main.scss';
+import GameScene from './js/GameScene';
 import Phaser from 'phaser';
-
-const scene = new Phaser.Scene('Game');
-
-scene.preload = function () {
-	this.load.image('bg', 'src/assets/image/bg-stars.jpg');
-};
-
-scene.create = function () {
-	this.add.sprite(0, 0, 'bg');
-};
 
 const config = {
 	type: Phaser.AUTO,
-	width: 1280,
-	height: 720,
-	scene,
+	width: 2560,
+	height: 1600,
+	rows: 2,
+	cols: 5,
 };
 
-const game = new Phaser.Game(config);
+let game = new Phaser.Game({
+	...config,
+	scene: new GameScene(config),
+});

@@ -45,7 +45,7 @@ module.exports = (env, argv) => {
 			],
 		},
 		plugins: [
-			new CleanWebpackPlugin(),
+			isProduction && new CleanWebpackPlugin(),
 			new HtmlWebpackPlugin({
 				template: './index.html',
 				minify: isProduction,
