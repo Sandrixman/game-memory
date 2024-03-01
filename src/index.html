@@ -6,9 +6,15 @@
 		<meta name="description" content="A simple game where you have to find the same cards" />
 		<title>Game "Memory"</title>
 		<style>
+			body {
+				margin: 0;
+			}
+			canvas {
+				width: 100%;
+			}
 			@font-face {
 				font-family: 'KodeMomo';
-				src: url('assets/fonts/KodeMono-VariableFont_wght.ttf');
+				src: url('fonts/KodeMono-VariableFont_wght.ttf');
 			}
 			.fontPreload {
 				font-family: 'KodeMomo';
@@ -19,5 +25,9 @@
 	</head>
 	<body>
 		<div class="fontPreload">.</div>
+		<script src="js/phaser.min.js"></script>
+		<script src="js/Card.js"></script>
+		<script src="js/GameScene.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

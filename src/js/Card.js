@@ -1,6 +1,4 @@
-import Phaser from 'phaser';
-
-export default class Card extends Phaser.GameObjects.Sprite {
+class Card extends Phaser.GameObjects.Sprite {
 	constructor(scene, value) {
 		super(scene, 'card');
 		this.scene = scene;

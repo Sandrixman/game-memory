@@ -1,6 +1,4 @@
-import Card from './Card';
-
-export default class GameScene extends Phaser.Scene {
+class GameScene extends Phaser.Scene {
 	constructor(config) {
 		super('Game');
 		this.gameConfig = config;
@@ -8,17 +6,17 @@ export default class GameScene extends Phaser.Scene {
 	}
 
 	preload() {
-		this.load.image('bg', 'assets/image/bg-galaxy.jpg');
-		this.load.image('card', 'assets/image/card.png');
+		this.load.image('bg', 'images/setCards2/bg.jpg');
+		this.load.image('card', 'images/setCards2/card.jpg');
 		for (let i = 1; i <= this.gameConfig.cards.length; i++) {
-			this.load.image('card' + i, 'assets/image/card' + i + '.jpg');
+			this.load.image('card' + i, 'images/setCards2/card' + i + '.jpg');
 		}
 
-		this.load.audio('card', 'assets/sounds/card.mp3');
-		this.load.audio('complete', 'assets/sounds/complete.mp3');
-		this.load.audio('success', 'assets/sounds/success.mp3');
-		this.load.audio('theme', 'assets/sounds/theme.mp3');
-		this.load.audio('timeout', 'assets/sounds/timeout.mp3');
+		this.load.audio('card', 'sounds/card.mp3');
+		this.load.audio('complete', 'sounds/complete.mp3');
+		this.load.audio('success', 'sounds/success.mp3');
+		this.load.audio('theme', 'sounds/theme.mp3');
+		this.load.audio('timeout', 'sounds/timeout.mp3');
 	}
 
 	createBackground() {
